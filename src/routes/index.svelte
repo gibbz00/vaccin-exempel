@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { get } from 'svelte/store'
+	import Layout from './__layout.svelte'
+
 	// Lista med vaccin som finns
-	let existingVaccines: string[] = ['COVID-19', 'Hepatit A', 'Mässning', 'Polio']
+	let existingVaccines: string[] = ['COVID-19', 'Hepatit A', 'Mässling', 'Polio']
 	// Lista med tagna vaccin
 	let takenVaccines: string[] = []
 
@@ -32,6 +35,14 @@
 			}
 		}
 	}
+
+	let countryVaccineInfo: Map<string, string[]> = new Map()
+	countryVaccineInfo.set('USA', ['Mässling', 'Polio'])
+	countryVaccineInfo.set('Sverige', ['COVID-19', 'Polio'])
+
+	let chosenCountry: string | undefined = undefined
+
+	console.log(takenVaccines.includes('COVID-19'))
 </script>
 
 <h1 class="text-6xl">Vaccinkoll</h1>
@@ -57,3 +68,23 @@
 {#each takenVaccines as vaccine}
 	<div>{vaccine}</div>
 {/each}
+
+<hr />
+
+<h2>Välj land:</h2>
+<select bind:value={chosenCountry}>
+	{#each [...countryVaccineInfo.keys()] as country}
+		<option value={country}>{country} </option>
+	{/each}
+</select>
+
+{#if chosenCountry != undefined}
+	{#each [...countryVaccineInfo.get(chosenCountry)] as recommendedVaccines}
+		<dir>
+			{recommendedVaccines}
+		</dir>
+		{#if !takenVaccines.includes(recommendedVaccines)}
+			Inte taget!
+		{/if}
+	{/each}
+{/if}
