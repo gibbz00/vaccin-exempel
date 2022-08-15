@@ -13,6 +13,25 @@
 		newVaccine = ''
 		console.log(existingVaccines)
 	}
+
+	function removeVaccine(vaccine: string) {
+		// Ta bord från vaccin lista
+		// (ställe)
+		{
+			let index = existingVaccines.indexOf(vaccine)
+			existingVaccines.splice(index, 1)
+			existingVaccines = existingVaccines
+		}
+
+		{
+			// Ta bort från tagna
+			let index = takenVaccines.indexOf(vaccine)
+			if (index > -1) {
+				takenVaccines.splice(index, 1)
+				takenVaccines = takenVaccines
+			}
+		}
+	}
 </script>
 
 <h1 class="text-6xl">Vaccinkoll</h1>
@@ -23,6 +42,7 @@
 	<div>
 		{vaccine}
 		<input type="checkbox" bind:group={takenVaccines} value={vaccine} />
+		<span on:click={() => removeVaccine(vaccine)}>X</span>
 	</div>
 {/each}
 
