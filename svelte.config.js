@@ -10,16 +10,9 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter({
-			pages: 'docs',
-			assets: 'docs',
-		}),
+		adapter: adapter(),
 		paths: {
-			base: '/vaccin-exempel',
-		},
-
-		prerender: {
-			default: true,
+			base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",		
 		},
 	},
 }
