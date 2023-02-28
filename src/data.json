@@ -1,0 +1,75 @@
+[
+    {
+        "landskod": "SE",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Rabies", "TBE"
+        ]
+    },
+    {
+        "landskod": "CN",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Rabies", "Tyfus", "TBE"
+        ]
+    },
+    {
+        "landskod": "AU",
+        "vaccin": [
+            "COVID-19", "Hepatit B", "Rabies"
+        ]
+    },
+    {
+        "landskod": "IT",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Rabies", "TBE"
+        ]
+    },
+    {
+        "landskod": "GR",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Rabies"
+        ]
+    },
+    {
+        "landskod": "YE",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Kolera", "Malaria", "Polio", "Rabies", "Tyfus"
+        ]
+    },
+    {
+        "landskod": "VN",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Japansk encefalit", "Malaria", "Rabies", "Tyfus"
+        ]
+    },
+    {
+        "landskod": "RU",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Japansk encefalit", "Malaria", "Rabies", "TBE"
+        ]
+    },
+    {
+        "landskod": "PT",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Rabies"
+        ]
+    },
+    {
+        "landskod": "SG",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Rabies", "Tyfus"
+        ]
+    },
+    {
+        "landskod": "ZA",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Malaria", "Rabies", "Tyfus"
+        ]
+    },
+    {
+        "landskod": "EG",
+        "vaccin": [
+            "COVID-19", "Hepatit A", "Hepatit B", "Polio", "Rabies", "Tyfus"
+        ]
+    }
+    
+]
